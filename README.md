@@ -1,4 +1,4 @@
-# Globo Map API
+# GloboMap Hands on
 
 Application responsible for reading and writing in ARANGODB. This application has a RESTFul API.
 
@@ -29,14 +29,19 @@ globomap_redis <br>
 globomap_ui <br>
 
 ## Running Project
-### Creating collections, edges and graphs <br>
-`$ python3.6 base.py ` <br>
+### Creating collections, edges and graphs
+`$ python3.6 base.py `
 
-### Insering documents <br>
-`$ python3.6 insert.py ` <br>
+### Insering documents
+`$ python3.6 insert.py `
 
-Open in browser <br>
-`http://localhost:8888/` <br>
+### Open in browser
+`http://localhost:8888/`
+
+## Presentation slides
+### Brazilian portuguese
+https://speakerdeck.com/edersonbrilhante/mapeando-1-milhao-de-recursos-em-uma-cloud
+
 
 ## Licensing
 
