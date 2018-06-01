@@ -11,7 +11,7 @@ Application responsible for reading and writing in ARANGODB. This application ha
 
 ### Uping projects
 `$ cd globomap-api; docker-compose up -d ` <br>
-Configure API: https://github.com/globocom/globomap-api#running-local-with-docker
+Configure API: https://github.com/globocom/globomap-api#running-local-with-docker <br>
 `$ cd globomap-core-loader; docker-compose up -d ` <br>
 `$ cd globomap-ui; docker-compose up -d ` <br>
 
