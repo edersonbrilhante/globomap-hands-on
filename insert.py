@@ -8,7 +8,201 @@ auth_inst = Auth(
     password='u_globomap_api'
 )
 
-update = Update(auth=auth_inst, driver_name='python_nordeste')
+
+update = Update(auth=auth_inst, driver_name='talk_globomap')
+
+data = {
+    "action": "CLEAR",
+    "collection": "vip",
+    "element": [
+      [
+        {
+          "field": "timestamp",
+          "operator": ">",
+          "value": 1
+        }
+      ]
+    ],
+    "type": "collections"
+  }
+res = update.post(data)
+
+data = {
+    "action": "CLEAR",
+    "collection": "vip_vm",
+    "element": [
+      [
+        {
+          "field": "timestamp",
+          "operator": ">",
+          "value": 1
+        }
+      ]
+    ],
+    "type": "edges"
+  }
+res = update.post(data)
+
+data = {
+    "action": "CLEAR",
+    "collection": "vm",
+    "element": [
+      [
+        {
+          "field": "timestamp",
+          "operator": ">",
+          "value": 1
+        }
+      ]
+    ],
+    "type": "collections"
+  }
+res = update.post(data)
+
+data = {
+    "action": "CLEAR",
+    "collection": "network",
+    "element": [
+      [
+        {
+          "field": "timestamp",
+          "operator": ">",
+          "value": 1
+        }
+      ]
+    ],
+    "type": "collections"
+  }
+res = update.post(data)
+
+data = {
+    "action": "CLEAR",
+    "collection": "network_vm",
+    "element": [
+      [
+        {
+          "field": "timestamp",
+          "operator": ">",
+          "value": 1
+        }
+      ]
+    ],
+    "type": "edges"
+  }
+res = update.post(data)
+
+data = {
+    "action": "CLEAR",
+    "collection": "acl_access",
+    "element": [
+      [
+        {
+          "field": "timestamp",
+          "operator": ">",
+          "value": 1
+        }
+      ]
+    ],
+    "type": "edges"
+  }
+res = update.post(data)
+
+
+data = {
+    "action": "CLEAR",
+    "collection": "vip",
+    "element": [
+      [
+        {
+          "field": "timestamp",
+          "operator": ">",
+          "value": 1
+        }
+      ]
+    ],
+    "type": "collections"
+  }
+res = update.post(data)
+
+data = {
+    "action": "CLEAR",
+    "collection": "vip_vm",
+    "element": [
+      [
+        {
+          "field": "timestamp",
+          "operator": ">",
+          "value": 1
+        }
+      ]
+    ],
+    "type": "edges"
+  }
+res = update.post(data)
+
+data = {
+    "action": "CLEAR",
+    "collection": "vm",
+    "element": [
+      [
+        {
+          "field": "timestamp",
+          "operator": ">",
+          "value": 1
+        }
+      ]
+    ],
+    "type": "collections"
+  }
+res = update.post(data)
+
+data = {
+    "action": "CLEAR",
+    "collection": "network",
+    "element": [
+      [
+        {
+          "field": "timestamp",
+          "operator": ">",
+          "value": 1
+        }
+      ]
+    ],
+    "type": "collections"
+  }
+res = update.post(data)
+
+data = {
+    "action": "CLEAR",
+    "collection": "network_vm",
+    "element": [
+      [
+        {
+          "field": "timestamp",
+          "operator": ">",
+          "value": 1
+        }
+      ]
+    ],
+    "type": "edges"
+  }
+res = update.post(data)
+
+data = {
+    "action": "CLEAR",
+    "collection": "acl_access",
+    "element": [
+      [
+        {
+          "field": "timestamp",
+          "operator": ">",
+          "value": 1
+        }
+      ]
+    ],
+    "type": "edges"
+  }
+res = update.post(data)
 
 # Create vip
 data = {
@@ -16,12 +210,12 @@ data = {
     "collection": "vip",
     "element": {
         "id": "300",
-        "name": "pythonne.globo.com",
+        "name": "talk_globomap.globo.com",
         "properties": {
             "ip": "10.0.10.1",
             "ambiente": "Produção BE"
         },
-        "provider": "pyne",
+        "provider": "talk_globomap",
         "timestamp": int(time.time())
     },
     "type": "collections"
@@ -38,10 +232,10 @@ data = {
         "properties": {
             "porta": "8000"
         },
-        "provider": "pyne",
+        "provider": "talk_globomap",
         "timestamp": int(time.time()),
-        "from": "vip/pyne_300",
-        "to": "vm/pyne_1"
+        "from": "vip/talk_globomap_300",
+        "to": "vm/talk_globomap_1"
     },
     "type": "edges"
 }
@@ -57,7 +251,7 @@ data = {
         "properties": {
             "ip": "10.9.9.1",
         },
-        "provider": "pyne",
+        "provider": "talk_globomap",
         "timestamp": int(time.time())
     },
     "type": "collections"
@@ -74,7 +268,7 @@ data = {
         "properties": {
             "ip": "10.10.9.2",
         },
-        "provider": "pyne",
+        "provider": "talk_globomap",
         "timestamp": int(time.time())
     },
     "type": "collections"
@@ -91,7 +285,7 @@ data = {
         "properties": {
             "network": "10.9.9.0/24",
         },
-        "provider": "pyne",
+        "provider": "talk_globomap",
         "timestamp": int(time.time())
     },
     "type": "collections"
@@ -108,7 +302,7 @@ data = {
         "properties": {
             "network": "10.10.9.2/24",
         },
-        "provider": "pyne",
+        "provider": "talk_globomap",
         "timestamp": int(time.time())
     },
     "type": "collections"
@@ -125,10 +319,10 @@ data = {
         "properties": {
             "ip": "10.9.9.1",
         },
-        "provider": "pyne",
+        "provider": "talk_globomap",
         "timestamp": int(time.time()),
-        "from": "network/pyne_1",
-        "to": "vm/pyne_1"
+        "from": "network/talk_globomap_1",
+        "to": "vm/talk_globomap_1"
     },
     "type": "edges"
 }
@@ -144,10 +338,10 @@ data = {
         "properties": {
             "ip": "10.9.9.2",
         },
-        "provider": "pyne",
+        "provider": "talk_globomap",
         "timestamp": int(time.time()),
-        "from": "network/pyne_2",
-        "to": "vm/pyne_2"
+        "from": "network/talk_globomap_2",
+        "to": "vm/talk_globomap_2"
     },
     "type": "edges"
 }
@@ -163,10 +357,10 @@ data = {
         "properties": {
             "porta": "3306",
         },
-        "provider": "pyne",
+        "provider": "talk_globomap",
         "timestamp": int(time.time()),
-        "from": "vm/pyne_1",
-        "to": "vm/pyne_2"
+        "from": "vm/talk_globomap_1",
+        "to": "vm/talk_globomap_2"
     },
     "type": "edges"
 }
