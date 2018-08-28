@@ -1,12 +1,14 @@
+import os
 from globomap_api_client.auth import Auth
 from globomap_api_client.collection import Collection
 from globomap_api_client.edge import Edge
 from globomap_api_client.graph import Graph
 from globomap_api_client.query import Query
 
+GMAP_API_PORT = os.getenv('GMAP_API_PORT', '7002')
 
 auth_inst = Auth(
-    api_url='http://localhost:5000',
+    api_url='http://localhost:{}'.format(GMAP_API_PORT),
     username='u_globomap_api',
     password='u_globomap_api'
 )

@@ -1,9 +1,12 @@
 import time
+import os
 from globomap_loader_api_client.auth import Auth
 from globomap_loader_api_client.update import Update
 
+GMAP_LOADER_API_PORT = os.getenv('GMAP_LOADER_API_PORT', '7010')
+
 auth_inst = Auth(
-    api_url='http://localhost:5003',
+    api_url='http://localhost:{}'.format(GMAP_LOADER_API_PORT),
     username='u_globomap_api',
     password='u_globomap_api'
 )
