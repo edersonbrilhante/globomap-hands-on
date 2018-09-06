@@ -1,5 +1,5 @@
-APScheduler==3.3.1
-globomap-api-client==0.0.13
-globomap-loader-api-client==0.0.2
+APScheduler==3.5.1
+globomap-api-client==1.0.4
+globomap-loader-api-client==0.0.7
 raven==6.6.0
 requests==2.18.4
